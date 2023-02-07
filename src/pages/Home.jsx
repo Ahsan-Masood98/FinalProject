@@ -23,21 +23,22 @@ const Home = () => {
     dispatch(getNewGamesList());
     dispatch(getUpcommingGamesList());
   }, [dispatch]);
+
   const popularGames = useSelector(selectPopularGames);
   const newGames = useSelector(selectNewGames);
   const upcommingGames = useSelector(selectUpcommingGames);
   return (
     <div style={{ padding: "0rem 5rem" }}>
-      <CarouselSlide />
+      <CarouselSlide items={upcommingGames} />
       <Row>
-        <Col lg="8">
+        <Col sm="8">
           <div className="tittle">
             <p className="fs-3">
               <b>Popular Games</b>
             </p>
           </div>
         </Col>
-        <Col lg="4">
+        <Col sm="4">
           <div className="btn__all">
             <Link className="arrow_right" to="/popular">
               View All
@@ -54,14 +55,14 @@ const Home = () => {
         )}
       </Row>
       <Row>
-        <Col lg="8">
+        <Col sm="8">
           <div className="tittle">
             <p className="fs-3">
               <b>Latest Games</b>
             </p>
           </div>
         </Col>
-        <Col lg="4">
+        <Col sm="4">
           <div className="btn__all">
             <Link className="arrow_right" to="/popular">
               View All
@@ -78,14 +79,14 @@ const Home = () => {
         )}
       </Row>
       <Row>
-        <Col lg="8">
+        <Col sm="8">
           <div className="tittle">
             <p className="fs-3">
               <b>Upcomming Games</b>
             </p>
           </div>
         </Col>
-        <Col lg="4">
+        <Col sm="4">
           <div className="btn__all">
             <Link className="arrow_right" to="/popular">
               View All

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Carousel,
   CarouselItem,
@@ -6,29 +7,31 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
+import "./carouselSlide.css";
 
-const items = [
-  {
-    id: 1,
-    altText: "Slide 1",
-    caption: "Slide 1",
-  },
-  {
-    id: 2,
-    altText: "Slide 2",
-    caption: "Slide 2",
-  },
-  {
-    id: 3,
-    altText: "Slide 3",
-    caption: "Slide 3",
-  },
-];
+// const items = [
+//   {
+//     id: 1,
+//     altText: "Slide 1",
+//     caption: "Slide 1",
+//   },
+//   {
+//     id: 2,
+//     altText: "Slide 2",
+//     caption: "Slide 2",
+//   },
+//   {
+//     id: 3,
+//     altText: "Slide 3",
+//     caption: "Slide 3",
+//   },
+// ];
 
-const CarouselSlide = (props) => {
+function CarouselSlide({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
+  console.log(items);
   const next = () => {
     if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
@@ -46,7 +49,7 @@ const CarouselSlide = (props) => {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
+  const slides = items.map((item, index) => {
     return (
       <CarouselItem
         className="custom-tag"
@@ -55,9 +58,19 @@ const CarouselSlide = (props) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <CarouselCaption
+        <img
+          style={{ width: "100%", height: "500px" }}
+          src={item.background_image}
+          alt={item.name}
+        />
+        {/* <CarouselCaption
           className="text-danger"
-          captionText={item.caption}
+          captionText={item.name}
+          captionHeader={item.esrb_rating.name}
+        /> */}
+        <CarouselCaption
+          className="text"
+          captionText={item.name}
           captionHeader={item.caption}
         />
       </CarouselItem>
@@ -66,13 +79,6 @@ const CarouselSlide = (props) => {
 
   return (
     <div>
-      <style>
-        {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: black;
-            }`}
-      </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}
@@ -93,6 +99,6 @@ const CarouselSlide = (props) => {
       </Carousel>
     </div>
   );
-};
+}
 
 export default CarouselSlide;
