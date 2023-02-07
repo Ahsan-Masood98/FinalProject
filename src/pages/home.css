@@ -1,0 +1,20 @@
+.tittle {
+  padding: 10px 0px;
+}
+.btn__all {
+  text-align: right;
+  padding: 10px 0px;
+}
+.arrow_right {
+  text-decoration: none;
+  padding: 10px 5px;
+  font-family: "Poppins", sans-serif;
+  color: #212530;
+  font-size: 25px;
+}
+.arrow_right:hover {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #212530;
+  font-size: 30px;
+}

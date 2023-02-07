@@ -1,0 +1,12 @@
+.game-disp {
+  margin-bottom: 5px;
+}
+.game-card {
+  min-height: 100%;
+  text-align: center;
+}
+.game-img {
+  border-radius: 5px;
+  max-height: 30vh;
+  width: 100%;
+}
