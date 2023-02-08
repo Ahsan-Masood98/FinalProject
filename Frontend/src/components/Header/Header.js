@@ -16,7 +16,11 @@ function Header(args) {
 
   return (
     <Navbar {...args} container="fluid" expand="lg" className="shadow mb-3">
-      <NavbarBrand>Games4U</NavbarBrand>
+      <NavbarBrand>
+        <NavLink to="/" className="nav-link">
+          Games4U
+        </NavLink>
+      </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="me-auto" navbar>

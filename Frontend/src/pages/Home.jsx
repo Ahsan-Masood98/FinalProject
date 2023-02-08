@@ -49,7 +49,7 @@ const Home = () => {
       <Row>
         {popularGames?.map(
           (games, index) =>
-            index < 8 && ( // <= only 8 items
+            index < 4 && ( // <= only 8 items
               <GameCard key={index} {...games} />
             )
         )}
@@ -73,7 +73,7 @@ const Home = () => {
       <Row>
         {newGames?.map(
           (games, index) =>
-            index < 8 && ( // <= only 8 items
+            index < 4 && ( // <= only 8 items
               <GameCard key={index} {...games} />
             )
         )}
@@ -97,7 +97,7 @@ const Home = () => {
       <Row>
         {upcommingGames?.map(
           (games, index) =>
-            index < 8 && ( // <= only 8 items
+            index < 4 && ( // <= only 8 items
               <GameCard key={index} {...games} />
             )
         )}

@@ -65,9 +65,7 @@ const GameDetailModal = () => {
   };
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
-        View Detail
-      </Button>
+      <Button onClick={toggle}>View Detail</Button>
       {isLoading && (
         <Modal isOpen={modal} toggle={toggle} fullscreen>
           <ModalHeader toggle={toggle}>{gameDetail.name}</ModalHeader>
