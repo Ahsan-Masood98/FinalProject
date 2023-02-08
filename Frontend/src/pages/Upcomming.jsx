@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Row } from "reactstrap";
 import { getUpcommingGamesList } from "../redux/actions/gamesAction";
 import { selectUpcommingGames } from "../redux/slices/gamesSlice";
+import { Row } from "reactstrap";
 import GameCard from "../components/GameCard/GameCard";
 
 const Home = () => {

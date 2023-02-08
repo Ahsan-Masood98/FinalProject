@@ -64,7 +64,7 @@ const Home = () => {
         </Col>
         <Col sm="4">
           <div className="btn__all">
-            <Link className="arrow_right" to="/popular">
+            <Link className="arrow_right" to="/latest">
               View All
             </Link>
           </div>
@@ -88,7 +88,7 @@ const Home = () => {
         </Col>
         <Col sm="4">
           <div className="btn__all">
-            <Link className="arrow_right" to="/popular">
+            <Link className="arrow_right" to="/upcomming">
               View All
             </Link>
           </div>

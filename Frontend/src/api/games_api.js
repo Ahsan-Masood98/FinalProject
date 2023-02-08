@@ -1,6 +1,8 @@
 //Base URL
 const base_url = "https://api.rawg.io/api/";
 
+const key = "9d7adf371e9f4045925eeca58fb622d2";
+
 //Getting the date
 const getCurrentMonth = () => {
   const month = new Date().getMonth() + 1;
@@ -39,13 +41,14 @@ export const upcommingGamesURL = () => `${base_url}${upcoming_games}`;
 // const upcommingGamesURL = () => `${base_url}${upcoming_games}`;
 export const newGamesURL = () => `${base_url}${newGames}`;
 // const newGamesURL = () => `${base_url}${newGames}`;
-// // //GAME DETAILS
-// export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}`;
-// //Game ScreenShots
-// export const gameScreenshotURL = (game_id) =>
-//   `${base_url}games/${game_id}/screenshots`;
-// //Searched game
-// export const searchGameURL = (game_name) =>
-//   `${base_url}games?key=a2dc74fd7762490499ec2196df8d888e&search=${game_name}&page_size=9`;
+//GAME DETAILS
+export const gameDetailsURL = (game_id) =>
+  `${base_url}games/${game_id}?key=${key}`;
+//Game ScreenShots
+export const gameScreenshotURL = (game_id) =>
+  `${base_url}games/${game_id}/screenshots?key=${key}`;
+//Searched game
+export const searchGameURL = (game_name) =>
+  `${base_url}games?search=${game_name}&key=${key}`;
 
 // console.log(upcommingGamesURL());
