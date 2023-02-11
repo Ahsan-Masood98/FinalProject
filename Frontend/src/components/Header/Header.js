@@ -17,7 +17,7 @@ function Header(args) {
   return (
     <Navbar {...args} container="fluid" expand="lg" className="shadow mb-3">
       <NavbarBrand>
-        <NavLink to="/" className="nav-link">
+        <NavLink to="/home" className="nav-link">
           Games4U
         </NavLink>
       </NavbarBrand>
@@ -25,7 +25,7 @@ function Header(args) {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/home" className="nav-link">
               HOME
             </NavLink>
           </NavItem>

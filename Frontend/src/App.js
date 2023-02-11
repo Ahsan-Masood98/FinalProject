@@ -10,21 +10,22 @@ import { store } from "./redux/store";
 import BasicLayout from "./layout/BasicLayout";
 import Popular from "./pages/Popular";
 import Searched from "./pages/Searched";
-
+import Register from "./User/Register";
 const App = () => {
   return (
     <div>
       <Provider store={store}>
+      <Routes>
+      <Route path="/" element={<Register/>}/>
         <BasicLayout>
-          <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/popular" element={<Popular />} />
             <Route path="/latest" element={<Latest />} />
             <Route path="/upcomming" element={<Upcomming />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/searched" element={<Searched />} />
+            </BasicLayout>
           </Routes>
-        </BasicLayout>
       </Provider>
     </div>
   );
