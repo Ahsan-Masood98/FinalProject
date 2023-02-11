@@ -10,21 +10,64 @@ import { store } from "./redux/store";
 import BasicLayout from "./layout/BasicLayout";
 import Popular from "./pages/Popular";
 import Searched from "./pages/Searched";
-
+import LoginPage from "./pages/Auth/LoginPage";
+import SignupPage from "./pages/Auth/SignupPage";
 const App = () => {
   return (
     <div>
       <Provider store={store}>
-        <BasicLayout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/popular" element={<Popular />} />
-            <Route path="/latest" element={<Latest />} />
-            <Route path="/upcomming" element={<Upcomming />} />
-            <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/searched" element={<Searched />} />
-          </Routes>
-        </BasicLayout>
+        <Routes>
+          <Route path="/auth/login" element={<LoginPage />} />
+          <Route path="/auth/signup" element={<SignupPage />} />
+          <Route
+            path="/"
+            element={
+              <BasicLayout>
+                <Home />
+              </BasicLayout>
+            }
+          />
+          <Route
+            path="/popular"
+            element={
+              <BasicLayout>
+                <Popular />
+              </BasicLayout>
+            }
+          />
+          <Route
+            path="/latest"
+            element={
+              <BasicLayout>
+                <Latest />
+              </BasicLayout>
+            }
+          />
+          <Route
+            path="/upcomming"
+            element={
+              <BasicLayout>
+                <Upcomming />
+              </BasicLayout>
+            }
+          />
+          <Route
+            path="/wishlist"
+            element={
+              <BasicLayout>
+                <Wishlist />
+              </BasicLayout>
+            }
+          />
+          <Route
+            path="/searched"
+            element={
+              <BasicLayout>
+                <Searched />
+              </BasicLayout>
+            }
+          />
+        </Routes>
       </Provider>
     </div>
   );
