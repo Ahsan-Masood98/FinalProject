@@ -10,29 +10,12 @@ import { store } from "./redux/store";
 import BasicLayout from "./layout/BasicLayout";
 import Popular from "./pages/Popular";
 import Searched from "./pages/Searched";
-<<<<<<< HEAD
-import Register from "./User/Register";
-=======
 import LoginPage from "./pages/Auth/LoginPage";
 import SignupPage from "./pages/Auth/SignupPage";
->>>>>>> 8ccdbc580a4342933ab0b2d86f3b613fb4fac31f
 const App = () => {
   return (
     <div>
       <Provider store={store}>
-<<<<<<< HEAD
-      <Routes>
-      <Route path="/" element={<Register/>}/>
-        <BasicLayout>
-            <Route path="/home" element={<Home />} />
-            <Route path="/popular" element={<Popular />} />
-            <Route path="/latest" element={<Latest />} />
-            <Route path="/upcomming" element={<Upcomming />} />
-            <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/searched" element={<Searched />} />
-            </BasicLayout>
-          </Routes>
-=======
         <Routes>
           <Route path="/auth/login" element={<LoginPage />} />
           <Route path="/auth/signup" element={<SignupPage />} />
@@ -85,7 +68,6 @@ const App = () => {
             }
           />
         </Routes>
->>>>>>> 8ccdbc580a4342933ab0b2d86f3b613fb4fac31f
       </Provider>
     </div>
   );
